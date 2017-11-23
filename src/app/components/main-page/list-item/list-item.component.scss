@@ -1,0 +1,19 @@
+
+$headerFontSize: 0.75rem;
+.header{
+  font-weight: 700;
+
+  .title {
+    font-size: $headerFontSize * 1.8;
+  }
+  .operation, .date {
+    font-size: $headerFontSize;
+    color: #d6caca;
+  }
+  .operation, .title {
+    cursor: pointer;
+  }
+}
+.description{
+  color: #908e8e;
+}

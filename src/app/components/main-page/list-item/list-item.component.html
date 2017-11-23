@@ -1,0 +1,16 @@
+<div class="container-list-item">
+  <div class="header d-flex align-items-center">
+    <div class="title mr-auto" (click)="goToDetails()">
+      {{title}}
+    </div>
+    <div class="date mr-5">
+      <!-- {{getDateFromSecs(date) | date}} -->
+    </div>
+    <div class="operation">
+      <fa class="color-operation" name="star" animation="spin"></fa>
+      <span class="ml-2">Delete from favorites</span>
+    </div>
+  </div>
+  <div class="description mt-3" [innerHTML]="body | sanitizeHtml">
+  </div>
+</div>

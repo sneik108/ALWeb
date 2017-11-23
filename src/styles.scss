@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+// @import "../assets/external-css/bootstrap-cosmo-theme/bootstrap.min.css";
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.css";
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+body{
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  background-color: #0D0D0D;
+}
+
+.color-operation{
+  color: #EC9B1A;
+}
