@@ -14,8 +14,8 @@ export class MainPageComponent implements OnInit {
   private data: any[] = [];
 
   private positionToRead = 0;
-  numberToLoad: 20;
-  dataForShow: any = [];
+  numberToLoad = 20;
+  dataForShow = [];
 
 
   constructor(private http: Http) {
@@ -34,19 +34,21 @@ export class MainPageComponent implements OnInit {
 
   getListItems() {
     this.getData().subscribe(data => {
-      console.log(data);
       this.data = data;
       this.loadChunkData();
     });
   }
 
   loadChunkData() {
-    console.log(1);
     const vm = this;
-    vm.dataForShow.push(vm.data.slice(vm.positionToRead, vm.numberToLoad));
+    const chunkData = vm.data
+      .slice(vm.positionToRead, vm.numberToLoad + vm.positionToRead);
+    vm.positionToRead += vm.numberToLoad;
+    this.dataForShow = this.dataForShow.concat(chunkData);
   }
 
   onScroll() {
-    alert('hi');
+    console.log('1');
+    this.loadChunkData();
   }
 }

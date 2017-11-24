@@ -4,13 +4,13 @@
       {{title}}
     </div>
     <div class="date mr-5">
-      <!-- {{getDateFromSecs(date) | date}} -->
+      {{date | fromSecsToLocaleDate}}
     </div>
     <div class="operation">
       <fa class="color-operation" name="star" animation="spin"></fa>
       <span class="ml-2">Delete from favorites</span>
     </div>
   </div>
-  <div class="description mt-3" [innerHTML]="body | sanitizeHtml">
+  <div class="description mt-3" [innerHTML]="getDataPreview(body)">
   </div>
 </div>

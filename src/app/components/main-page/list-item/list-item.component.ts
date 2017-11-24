@@ -24,22 +24,16 @@ export class ListItemComponent implements OnInit {
   ngOnInit() {
   }
 
-  getDateFromSecs(secs) {
-    const date = new Date(1970, 0, 1);
-    date.setSeconds(secs);
-    // `${month} ${day}, ${year}`
-    return date.toLocaleDateString();
-  }
-
   getDataPreview(body: any) {
-    console.log(body);
-    return body.substring(0, 200);
+    // for sanitizing data
+    const div = document.createElement('div');
+    div.innerHTML = body;
+    return div.textContent.substring(0, 200);
   }
 
   goToDetails() {
     const listItem: ListItem = {body: this.body, title: this.title};
     this.dataService.listItem = listItem;
-    console.log(this.dataService.listItem);
     this.router.navigateByUrl('/details');
   }
 

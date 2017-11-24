@@ -1,7 +1,19 @@
 .operation {
   cursor: pointer;
+  font-size: 0.75rem;
 }
 
 .title {
   text-align: center;
+}
+
+.container-details {
+  background-color: white;
+  color: #0d0d0d;
+}
+.moderation {
+  text-align: center;
+  .icon-moderation {
+    font-size: 1rem;
+  }
 }

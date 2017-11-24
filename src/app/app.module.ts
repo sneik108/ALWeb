@@ -11,6 +11,7 @@ import { ListItemComponent } from './components/main-page/list-item/list-item.co
 import { SanitizeHtmlPipe } from './pipes/sanitize-html.pipe';
 import { DetailsComponent } from './components/main-page/details/details.component';
 import {DataService} from './services/data.service';
+import { FromSecsToLocaleDatePipe } from './pipes/from-secs-to-locale-date.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {DataService} from './services/data.service';
     MainPageComponent,
     ListItemComponent,
     SanitizeHtmlPipe,
-    DetailsComponent
+    DetailsComponent,
+    FromSecsToLocaleDatePipe
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,7 @@ import {DataService} from './services/data.service';
     AngularFontAwesomeModule,
     InfiniteScrollModule
   ],
-  providers: [DataService, SanitizeHtmlPipe],
+  providers: [DataService, SanitizeHtmlPipe, FromSecsToLocaleDatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
